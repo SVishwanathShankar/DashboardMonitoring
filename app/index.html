@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="dashboardApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="dashboardApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="dashboardApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="dashboardApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  <!--  End of omments --> 
+
+  <!-- Inbuilt defined scrips-->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <!--
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="nvd3.js"></script>
+  <link rel="stylesheet" href="nvd3.css">
+-->
+
+ <script src="bower_components/d3/d3.js"></script>
+ <script src="bower_components/nvd3/nv.d3.js"></script> <!-- or use another assembly -->
+ <script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+ <link rel="stylesheet" href="bower_components/nvd3/nv.d3.css">
+
+ <script src="bower_components/angular-resource/angular-resource.js"></script>
+
+  <script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="nav_bar/navBar.js"></script>
+  <script src="left_nav/leftNav.js"></script>
+  <script src="date_picker/datePicker.js"></script>
+  <script src="pipe_status/pipelineView.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+  <script src="charts/pipeline/integrity/integrity.js"></script>
+  <script src="charts/pipeline/latency/latency.js"></script>
+  <script src="services/httpService.js"></script>
+
+
+
+</head>
+<body>
+
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <div ng-controller="NavBarCtrl" ng-include="'nav_bar/navBar.html'"></div>
+      <div id="test">Test</div>
+
+
+      <div class="container-fluid">
+        <div class="row">
+           <div class="col-sm-3 col-md-2 sidebar" ng-controller="LeftNavCtrl" ng-include="'left_nav/leftNav.html'"></div>
+           <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+              <div class="row" ng-include="'date_picker/datePicker.html'"></div>  
+              <div ng-view></div>
+           </div>
+
+</div>
+
+</div>
+</div>
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+
+</body>
+</html>

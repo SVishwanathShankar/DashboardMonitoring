@@ -1,0 +1,46 @@
+<div ng-controller="DatepickerDemoCtrl">
+    <div class="row">
+
+        <div class="col-md-2">
+            <h4>From</h4>
+            <p class="input-group">
+              <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dtFrom" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
+
+        <div class="col-md-2">
+            <h4>To</h4>
+            <p class="input-group">
+              <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dtTo" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
+
+        <div class="col-md-2">
+            <h4>Colo</h4>
+               <select class="form-control">
+                  <option>All</option>
+                  <option>SLC-A</option>
+                  <option>SLC-B</option>
+                  <option>PHX</option>
+                  <option>DGC</option>
+                </select>     
+        </div>
+
+        <div class="col-md-2">
+            <h4>Granularity</h4>
+               <select class="form-control">
+                  <option>Hourly</option>
+                  <option>Daily</option>
+                  <option>Weekely</option>
+                  <option>Bi-Weekely</option>
+                </select>     
+        </div>
+
+    </div>
+</div>
